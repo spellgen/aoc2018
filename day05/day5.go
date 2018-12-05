@@ -8,6 +8,8 @@ import (
 func main() {
 	start := time.Now()
 
+	// ex2:=[]byte("xxxbaAB")
+
 	data := input
 
 	// Part 1
@@ -45,7 +47,8 @@ func reduceRepeat(in []byte) []byte {
 func reduce(in []byte) []byte {
 	out := make([]byte, 0, len(in))
 
-	for k := 1; k < len(in); k++ {
+	var k int
+	for k = 1; k < len(in); k++ {
 		diff := int(in[k-1]) - int(in[k])
 		// fmt.Printf("k=%d, in[k-1]=%q, in[k]=%q, diff=%d, out=%s\n", k, in[k-1], in[k], diff, string(out))
 
@@ -53,9 +56,9 @@ func reduce(in []byte) []byte {
 			k++
 		} else {
 			out = append(out, in[k-1])
-			if k == len(in)-1 {
-				out = append(out, in[k])
-			}
+		}
+		if k == len(in)-1 {
+			out = append(out, in[k])
 		}
 	}
 	return out
