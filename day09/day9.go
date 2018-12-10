@@ -5,13 +5,14 @@ import (
 	"flag"
 	"fmt"
 	"os"
+	"time"
 )
 
 var (
 	fs      = flag.NewFlagSet("numbers", flag.ExitOnError)
 	marbles = fs.Int("m", 25, "number of marbles in the game")
 	players = fs.Int("p", 9, "number of players")
-	debug = fs.Bool("d",false, "whistle while you work")
+	debug   = fs.Bool("d", false, "whistle while you work")
 )
 
 var val uint64
@@ -19,10 +20,11 @@ var val uint64
 func main() {
 	_ = fs.Parse(os.Args[1:])
 
+	begin := time.Now()
+
 	start := newMarble(0)
 	current := start
 	score := make(map[int]uint64)
-
 
 	for k := 1; k < *marbles; k++ {
 		if k%23 == 0 {
@@ -34,18 +36,20 @@ func main() {
 			current = insert(current, k)
 		}
 		if *debug {
-			printRing(start, current,k)
+			printRing(start, current, k)
 		}
 	}
 
 	var max uint64
-	for _,v := range score {
-		if v>max {
-			max=v
+	for _, v := range score {
+		if v > max {
+			max = v
 		}
 	}
 
-	fmt.Printf("max score=%d\n",max)
+	duration := time.Now().Sub(begin)
+
+	fmt.Printf("max score=%d, it took %s\n", max, duration)
 
 }
 
@@ -56,9 +60,9 @@ func remove(current *ring.Ring) (*ring.Ring, uint64) {
 	}
 	value := uint64(node.Value.(int))
 	if *debug {
-		fmt.Printf("remove found marble %d\n",value)
+		fmt.Printf("remove found marble %d\n", value)
 	}
-	node=node.Prev()
+	node = node.Prev()
 	node.Unlink(1)
 	return node.Next(), value
 }
