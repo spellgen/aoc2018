@@ -26,7 +26,7 @@ func main() {
 	current := start
 	score := make(map[int]uint64)
 
-	for k := 1; k < *marbles; k++ {
+	for k := 1; k <= *marbles; k++ {
 		if k%23 == 0 {
 			player := k % *players
 			score[player] += uint64(k)
