@@ -5,6 +5,7 @@ import (
 	"flag"
 	"fmt"
 	"os"
+	"runtime/pprof"
 	"time"
 )
 
@@ -13,18 +14,29 @@ var (
 	marbles = fs.Int("m", 25, "number of marbles in the game")
 	players = fs.Int("p", 9, "number of players")
 	debug   = fs.Bool("d", false, "whistle while you work")
+	cpuprofile = fs.String("cpu","", "generate cpu profiling information, send to this file")
 )
 
-var val uint64
 
 func main() {
 	_ = fs.Parse(os.Args[1:])
+
+	if *cpuprofile != "" {
+		f, err := os.Create(*cpuprofile)
+		if err != nil {
+			panic(err)
+		}
+		pprof.StartCPUProfile(f)
+		defer pprof.StopCPUProfile()
+	}
 
 	begin := time.Now()
 
 	start := newMarble(0)
 	current := start
 	score := make(map[int]uint64)
+
+	var val uint64
 
 	for k := 1; k < *marbles; k++ {
 		if k%23 == 0 {
