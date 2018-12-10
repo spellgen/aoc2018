@@ -392,11 +392,18 @@ Cell[BoxData[
    3.753379780892913*^9},
  CellLabel->"In[29]:=",ExpressionUUID->"e5cee29b-fa32-4805-bdac-3ea7a3157dbc"],
 
-Cell[BoxData["$Aborted"], "Output",
- CellChangeTimes->{3.753379778411104*^9},
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"2438.825589`", ",", "33022481"}], "}"}]], "Output",
+ CellChangeTimes->{3.753379778411104*^9, 3.7533822378793907`*^9},
  CellLabel->
-  "Out[28]=",ExpressionUUID->"6596cde6-bc47-449b-bc5d-01bc6f07085d"]
-}, Open  ]]
+  "Out[29]=",ExpressionUUID->"f1d0393a-6944-4320-85f4-4b942cf3e4e2"]
+}, Open  ]],
+
+Cell["Yeah this is not going to fly", "Text",
+ CellChangeTimes->{{3.753390598049892*^9, 
+  3.753390607811878*^9}},ExpressionUUID->"9f7b3404-67a6-47ad-bf87-\
+ae94b53701e7"]
 }, Open  ]]
 }, Open  ]]
 },
