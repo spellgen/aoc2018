@@ -30,7 +30,7 @@ func main() {
 		if k%23 == 0 {
 			player := k % *players
 			score[player] += uint64(k)
-			current, val = remove(current)
+			val = remove(current)
 			score[player] += val
 		} else {
 			current = insert(current, k)
@@ -53,8 +53,8 @@ func main() {
 
 }
 
-func remove(current *ring.Ring) (*ring.Ring, uint64) {
-	node := current
+// remove node 7 steps counter-clockwise, set current to next after that
+func remove(node *ring.Ring) uint64 {
 	for i := 0; i < 7; i++ {
 		node = node.Prev()
 	}
@@ -64,14 +64,15 @@ func remove(current *ring.Ring) (*ring.Ring, uint64) {
 	}
 	node = node.Prev()
 	node.Unlink(1)
-	return node.Next(), value
+	node.Next()
+	return value
 }
 
+// insert value k one after the current, return new current node
 func insert(c *ring.Ring, k int) *ring.Ring {
-	pos := c.Next()
+	c.Next()
 	node := newMarble(k)
-	pos.Link(node)
-	// printRing(c, c)
+	c.Link(node)
 	return node
 }
 
