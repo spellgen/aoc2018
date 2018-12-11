@@ -23,10 +23,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[      1064,         20]
-NotebookDataLength[     28884,        892]
+NotebookDataLength[     28879,        892]
 NotebookOptionsPosition[     24874,        777]
-NotebookOutlinePosition[     25212,        792]
-CellTagsIndexPosition[     25169,        789]
+NotebookOutlinePosition[     25207,        792]
+CellTagsIndexPosition[     25164,        789]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -776,7 +776,7 @@ ef8e6da6255b"]
 }, Open  ]]
 },
 WindowSize->{808, 911},
-WindowMargins->{{Automatic, -439}, {-80, Automatic}},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
 FrontEndVersion->"11.1 for Linux x86 (64-bit) (April 18, 2017)",
 StyleDefinitions->"Default.nb"
 ]
@@ -876,7 +876,7 @@ Cell[13386, 412, 1325, 40, 80, "Output", "ExpressionUUID" -> \
 Cell[CellGroupData[{
 Cell[14748, 457, 509, 16, 34, "Input", "ExpressionUUID" -> \
 "fbdd2108-08fc-46de-882c-c830becc658e"],
-Cell[15260, 475, 1350, 37, 225, "Output", "ExpressionUUID" -> \
+Cell[15260, 475, 1350, 37, 224, "Output", "ExpressionUUID" -> \
 "5ca83cfe-e394-42e9-a7d9-42ed3743b0c0"]
 }, Open  ]],
 Cell[16625, 515, 714, 18, 34, "Input", "ExpressionUUID" -> \
@@ -884,7 +884,7 @@ Cell[16625, 515, 714, 18, 34, "Input", "ExpressionUUID" -> \
 Cell[CellGroupData[{
 Cell[17364, 537, 260, 7, 34, "Input", "ExpressionUUID" -> \
 "4aefeaf3-4332-40f5-9451-46ca9ae8510a"],
-Cell[17627, 546, 3724, 113, 172, "Output", "ExpressionUUID" -> \
+Cell[17627, 546, 3724, 113, 218, "Output", "ExpressionUUID" -> \
 "4ff39aa2-168d-471d-8602-a16f2dcd85e8"]
 }, Open  ]],
 Cell[CellGroupData[{
@@ -902,7 +902,7 @@ Cell[22465, 699, 351, 10, 34, "Output", "ExpressionUUID" -> \
 Cell[CellGroupData[{
 Cell[22853, 714, 508, 16, 34, "Input", "ExpressionUUID" -> \
 "497294c4-9511-441b-bdc1-57036ba2ef04"],
-Cell[23364, 732, 1470, 40, 261, "Output", "ExpressionUUID" -> \
+Cell[23364, 732, 1470, 40, 227, "Output", "ExpressionUUID" -> \
 "0537436a-3251-47f2-a6a9-ef8e6da6255b"]
 }, Open  ]]
 }, Open  ]]
@@ -911,4 +911,4 @@ Cell[23364, 732, 1470, 40, 261, "Output", "ExpressionUUID" -> \
 ]
 *)
 
-(* NotebookSignature 8vTdjyhyJNFmKCg77QLOd5js *)
+(* NotebookSignature owTahpFTMgoYwCw10E9kHrEg *)
